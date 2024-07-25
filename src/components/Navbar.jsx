@@ -106,7 +106,7 @@ const Navbar = () => {
 					</ul>
 					<div  className="absolute bottom-0 w-[90%] mb-4 border-t-2  ">
 						<div className="flex mt-2 gap-2">
-						<a href=""><FaInstagram className="w-6 h-6 hover:text-blue-800 duration-500"/></a>
+						<a href="https://www.instagram.com/softwareclass4_23?igsh=a2N5dHM3bjByODZt"><FaInstagram className="w-6 h-6 hover:text-blue-800 duration-500"/></a>
 						<a href=""><CiLinkedin className="w-6 h-6 hover:text-blue-400 duration-500"/></a>
 						<a href=""><FaXTwitter className="w-6 h-6 hover:text-black duration-500"/></a>
 						</div>

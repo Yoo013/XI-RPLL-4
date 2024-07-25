@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const Home = () => {
 	useEffect(() => {
-		toast.success('🙌Selamat datang di Website XI RPL4 ');
+		toast('🙌  Selamat datang di Website Kelas XI RPL4 ');
 	  }, []);
 
 	return (
@@ -23,7 +23,7 @@ rtl={false}
 pauseOnFocusLoss
 draggable
 pauseOnHover
-theme="light"
+theme="dark"
 transition: Bounce
 />
 			<div className="lg:hidden">

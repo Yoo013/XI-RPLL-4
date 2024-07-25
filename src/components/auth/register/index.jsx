@@ -4,13 +4,11 @@ import { useAuth } from '../../../contexts/authContext'
 import { doCreateUserWithEmailAndPassword } from '../../../firebase/auth'
 import '../register/regis.css'
 
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+
 
 const Register = () => {
 
     const navigate = useNavigate()
-    const notify = () => toast("Login Berhasil");
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
@@ -31,19 +29,6 @@ const Register = () => {
     return (
         <>
             {userLoggedIn && (<Navigate to={'/home'} replace={true} />)}
-            <ToastContainer
-position="top-right"
-autoClose={5000}
-hideProgressBar={false}
-newestOnTop={false}
-closeOnClick
-rtl={false}
-pauseOnFocusLoss
-draggable
-pauseOnHover
-theme="light"
-transition: Bounce
-/>
             <main className="w-full h-screen flex self-center place-content-center place-items-center">
                 <div className="w-96 text-gray-600 space-y-5 p-4 shadow-xl border rounded-xl form">
                     <div className="text-center mb-6">
@@ -107,7 +92,7 @@ transition: Bounce
                             <span className='text-red-600 font-bold'>{errorMessage}</span>
                         )}
 
-<button onClick={notify}
+<button
                             type="submit"
                             disabled={isRegistering}
                             className={` ${isRegistering ? 'btn w-full  text-white' : 'w-full btn hover:shadow-xl text-white transition duration-300'}`}
