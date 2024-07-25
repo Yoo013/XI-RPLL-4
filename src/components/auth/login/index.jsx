@@ -4,8 +4,7 @@ import { doSignInWithEmailAndPassword, doSignInWithGoogle } from '../../../fireb
 import { useAuth } from '../../../contexts/authContext'
 import '../login/login.css'
 
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+
 
 const Login = () => {
     const { userLoggedIn } = useAuth()
@@ -34,23 +33,10 @@ const Login = () => {
         }
     }
 
-    const notify = () => toast("Login Berhasil");
+
 
     return (
         <div>
-            <ToastContainer
-position="top-right"
-autoClose={5000}
-hideProgressBar={false}
-newestOnTop={false}
-closeOnClick
-rtl={false}
-pauseOnFocusLoss
-draggable
-pauseOnHover
-theme="light"
-transition: Bounce
-/>
             {userLoggedIn && (<Navigate to={'/home'} replace={true} />)}
 
             <main className="w-full h-screen flex self-center place-content-center place-items-center">
@@ -99,7 +85,7 @@ transition: Bounce
                             <span className='text-red-600 font-bold'>{errorMessage}</span>
                         )}
 
-<button onClick={notify}
+<button 
                             type="submit"
                             disabled={isSigningIn}
                             className={` ${isSigningIn ? 'btn w-full  ' : 'w-full btn  transition duration-300 text-white'}`}
